@@ -1,13 +1,13 @@
 services:
   eyes:
-    image: xeyes
+    image: xeyes:fun
     command: "sleep 360"
     environment:
       - DISPLAY=:1.0
     ports:
       - "5900:5900"
   xserver:
-    image: xserver
+    image: xserver:fun
     network_mode: "service:eyes"
     healthcheck:
       test: "nc -z 127.0.0.1 5900"
