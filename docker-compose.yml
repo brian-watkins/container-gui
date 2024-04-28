@@ -1,0 +1,17 @@
+services:
+  eyes:
+    image: xeyes
+    command: "sleep 360"
+    environment:
+      - DISPLAY=:1.0
+    ports:
+      - "5900:5900"
+  xserver:
+    image: xserver
+    network_mode: "service:eyes"
+    healthcheck:
+      test: "nc -z 127.0.0.1 5900"
+      interval: 8s
+      timeout: 5s
+      retries: 5
+      start_period: 2s 
