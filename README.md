@@ -38,6 +38,12 @@ $ docker-compose up
 
 Then visit `http://localhost:8888/vnc.html` in your browser to connect.
 
+To start up a gui app in the dev container:
+
+```
+$ docker-compose exec -it dev /bin/bash
+```
+
 ### Kind
 
 To create the cluster:
@@ -48,3 +54,9 @@ $ ./start-cluster.sh
 ```
 
 Then visit `http://localhost:8888/vnc/vnc.html` in your browser to connect.
+
+To start up a GUI app in the dev container:
+
+```
+$ kubectl exec -it dev-container --container dev -- /bin/bash
+```
