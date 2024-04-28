@@ -9,7 +9,7 @@ spec:
   - name: dev
     image: xeyes:fun
     imagePullPolicy: Never
-    command: [ 'sh', '-c', 'echo "EYES!" && sleep 3600' ]
+    command: [ 'sh', '-c', 'echo "Dev Container Running!" && sleep 3600' ]
     env:
       - name: DISPLAY
         value: ":1.0"
@@ -17,4 +17,4 @@ spec:
     image: xserver:fun
     imagePullPolicy: Never
     ports:
-      - containerPort: 5900
+      - containerPort: 6080

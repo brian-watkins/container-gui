@@ -5,9 +5,7 @@ metadata:
 spec:
   selector:
     app: dev-container
-  type: NodePort
   ports:
     - protocol: TCP
-      nodePort: 30599
-      port: 5900
-      targetPort: 5900
+      port: 6080
+      targetPort: 6080
